@@ -1,6 +1,6 @@
 package com.example;
 
-public class Note {
+public class Note implements Composite{
 
     private final char value;
 
@@ -8,8 +8,14 @@ public class Note {
         this.value = value;
     }
 
-    public void play() {
-        System.out.println(value);
+    // Replaced
+    // public void play() {
+    //     System.out.println(value);
+    // }
+
+    @Override
+    public void toPlay(){
+        System.out.println("Note value is "+ value);
     }
 
 }
